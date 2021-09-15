@@ -53,9 +53,10 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hello, {}
-ɪ'ᴍ ʀʏᴏᴍᴇɴ ꜱᴜᴋᴜɴᴀ ᴛʜᴇ ᴄᴜʀꜱᴇ ᴋɪɴɢ.
 
-ɪ'ᴍ ᴀɴ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ꜰʀᴏᴍ ᴊᴜᴊᴜᴛꜱᴜ ᴋᴀɪꜱᴇɴ!!
+
+I Am Natsu Dragneel From Fairy Tail! 
+
 
 You can find the list of available commands with /help
 """
@@ -80,11 +81,10 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/f18ac5dd7c77213308b28.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/38b55c5e631dc85b9ad11.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+But My Owner Is Already Very Rich No Need To Donate."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -202,27 +202,27 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add sukuna To Your Group!",
+                            text="Add sukuna To Your Group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                      ],
                      [
                          InlineKeyboardButton(
-                             text="⚙️ Support Group",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                             text="Anime Chamber",
+                             url=f"https://t.me/animechamberuploads"),
                          InlineKeyboardButton(
-                             text="🔔Updates Channel",
-                             url="https://t.me/SukunaRobotUpdates")
+                             text="Chat Group",
+                             url="https://t.me/thechamberofanimefans")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="Log Channel",
-                             url="https://t.me/sukunaRobotlogs")
+                             text="Ongoing Anime",
+                             url="https://t.me/animechamberongoing")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="💾 Source Code",
-                             url="https://github.com/Eren2op/RYOMEN-SUKUNA-ROBOT")
+                             text="Owner",
+                             url="https://t.me/Natsu_Dragneel_FT")
                      ]]))
     else:
         update.effective_message.reply_text(
@@ -514,7 +514,7 @@ def donate(update: Update, context: CallbackContext):
                 disable_web_page_preview=True)
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!")
+                "No Need To Donate😉😉")
         except Unauthorized:
             update.effective_message.reply_text(
                 "Contact me in PM first to get donation information.")
@@ -543,7 +543,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[Gambare Gambare!](https://telegra.ph/file/be66ab5f18fa9c2657fd8.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I More Fired Up Now!](https://telegra.ph/file/0c60f937c5c6fc04870ef.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
@@ -587,7 +587,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("sukuna Is Now Online!")
+        LOGGER.info("Natsu Dragneel Is Now Online!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
    
     if len(argv) not in (1, 3, 4):
