@@ -224,9 +224,9 @@ def info(update: Update, context: CallbackContext):
         return
 
     rep = message.reply_text(
-        "<code>Finding Information In Jujutsu Tech...</code>", parse_mode=ParseMode.HTML)
+        "<code>Finding Information In Fairy Tail Library...</code>", parse_mode=ParseMode.HTML)
 
-    text = (f"╒═══「<b>Information Found In Jujutsu Databases:</b> 」\n"
+    text = (f"╒═══「<b>Information Found In Fairy Tail Library:</b> 」\n"
             f"Identification Number: <code>{user.id}</code>\n"
             f"First Name: {html.escape(user.first_name)}")
 
@@ -512,9 +512,7 @@ Examples:
 
 *Overall Information about you:*
  • `/info`*:* get information about a user. 
- 
-*What is that health thingy?*
- Come and see [HP System explained](https://t.me/OnePunchUpdates/192)
+
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
