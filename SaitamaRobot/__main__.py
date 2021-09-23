@@ -227,7 +227,7 @@ def start(update: Update, context: CallbackContext):
                      ]]))
     else:
         update.effective_message.reply_text(
-            "[I am fired up now!](https://telegra.ph/file/c4a69bdc855667d783958.mp4)\n<b>Up since:</b> <code>{}</code>".format(uptime),
+            "I am more fired up now!\n<b>Up since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
 
 
@@ -544,7 +544,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am more fired up now!](https://telegra.ph/file/c4a69bdc855667d783958.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am fired up now!](https://telegra.ph/file/c4a69bdc855667d783958.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
