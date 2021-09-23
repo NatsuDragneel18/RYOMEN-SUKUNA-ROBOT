@@ -271,26 +271,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis user is my Owner Sukuna."
+        text += "\n\nThis user is my Owner Natsu."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nBeware This user is A <b>Special Grade Sorcerer</b>."
+        text += "\n\nBeware This user is A <b>Gildarts/b>."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis user is A <b>First Grade Sorcerer</b>."
+        text += "\n\nThis user is A <b>Gray Fullbuster</b>."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis user is A <b>Second Grade Sorcerer</b>."
+        text += "\n\nThis user is A <b>Erza Scarlet</b>."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis user is A <b>Third Grade Sorcerer</b>."
+        text += "\n\nThis user is A <b>Mirajane Strauss</b>."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis user is a <b>student at Jujutsu Tech</b>."
+        text += "\n\nThis user is a <b>Laxus</b>."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/SukunaRobotUpdates/4">«-»</a>]'.format(
+        text += ' [<a href="https://t.me/NatsuDragneel_0botSupport/4">«-»</a>]'.format(
             bot.username)
 
     try:
