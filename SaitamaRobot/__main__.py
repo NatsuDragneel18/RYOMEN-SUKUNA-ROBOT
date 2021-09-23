@@ -52,28 +52,26 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, {}
+✥𝐇𝐞𝐥𝐥𝐨 {}, 
 
+✥𝐈 𝐀𝐦 𝐍𝐚𝐭𝐬𝐮 𝐃𝐫𝐚𝐠𝐧𝐞𝐞𝐥 𝐀 𝐅𝐢𝐫𝐞 𝐃𝐫𝐚𝐠𝐨𝐧 𝐒𝐥𝐚𝐲𝐞𝐫 𝐅𝐫𝐨𝐦 𝐅𝐚𝐢𝐫𝐲 𝐓𝐚𝐢𝐥.✥
 
-I Am Natsu Dragneel From Fairy Tail! 
+✥𝐈 𝐀𝐦 𝐀𝐧 𝐀𝐧𝐢𝐦𝐞 𝐓𝐡𝐞𝐦𝐞𝐝 𝐆𝐫𝐨𝐮𝐩 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭 𝐁𝐨𝐭.✥
 
-
-You can find the list of available commands with /help
+✥𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐌𝐲 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐌𝐨𝐝𝐮𝐥𝐞 𝐎𝐫 𝐓𝐲𝐩𝐞 /help...✥
 """
 
 HELP_STRINGS = """
 
 
-Have a look at the following for an idea of some of the things I can help you with.
 
-*Main* commands available:
- • /help: PM's you this message.
- • /help <module name>: PM's you info about that module.
- • /donate: information on how to donate!
- • /settings:
-   • in PM: will send you your settings for all supported modules.
-   • in a group: will redirect you to pm, with all that chat's settings.
+✥𝐇𝐞𝐲,
 
+✥𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐇𝐚𝐬 𝐌𝐚𝐧𝐲 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧 𝐂𝐡𝐨𝐨𝐬𝐞 𝐀𝐧𝐲 𝐌𝐨𝐝𝐮𝐥𝐞 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠 𝐌𝐞.✥
+
+✥𝐀𝐥𝐥 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐀𝐫𝐞 𝐄𝐢𝐭𝐡𝐞𝐫 𝐔𝐬𝐞𝐝 𝐁𝐲 `/` 𝐎𝐫 `!`.✥
+
+✥𝐑𝐞𝐚𝐜𝐡 𝐎𝐮𝐭 𝐅𝐨𝐫 𝐎𝐮𝐫 𝐀𝐧𝐢𝐦𝐞 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩. @TheChamberOfAnimeFans ✥
 
 {}
 And the following:
@@ -81,10 +79,13 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/38b55c5e631dc85b9ad11.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/35ceabd40a421297951e9.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-But My Owner Is Already Very Rich No Need To Donate."""
+DONATE_STRING = """𝐇𝐞𝐲𝐚, 𝐠𝐥𝐚𝐝 𝐭𝐨 𝐡𝐞𝐚𝐫 𝐲𝐨𝐮 𝐰𝐚𝐧𝐭 𝐭𝐨 𝐝𝐨𝐧𝐚𝐭𝐞!
+
+𝐁𝐮𝐭 𝐎𝐮𝐫 𝐎𝐰𝐧𝐞𝐫 𝐈𝐬 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐕𝐞𝐫𝐲 𝐑𝐢𝐜𝐡, 𝐍𝐨 𝐍𝐞𝐞𝐝 𝐓𝐨 𝐃𝐨𝐧𝐚𝐭𝐞.
+
+𝐉𝐮𝐬𝐭 𝐉𝐨𝐢𝐧 𝐎𝐮𝐫 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 𝐓𝐨 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐔𝐬. @TheChamberOfAnimeFans."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -202,7 +203,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add sukuna To Your Group!",
+                            text="Add Natsu To Your Group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                      ],
@@ -222,11 +223,11 @@ def start(update: Update, context: CallbackContext):
                      [
                          InlineKeyboardButton(
                              text="Owner",
-                             url="https://t.me/Natsu_Dragneel_FT")
+                             url="https://t.me/NatsuDragneel_FT")
                      ]]))
     else:
         update.effective_message.reply_text(
-            "I'm online!\n<b>Up since:</b> <code>{}</code>".format(uptime),
+            "[I am fired up now!](https://telegra.ph/file/c4a69bdc855667d783958.mp4)\n<b>Up since:</b> <code>{}</code>".format(uptime),
             parse_mode=ParseMode.HTML)
 
 
@@ -543,7 +544,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I More Fired Up Now!](https://telegra.ph/file/0c60f937c5c6fc04870ef.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am more fired up now!](https://telegra.ph/file/c4a69bdc855667d783958.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
